@@ -1,8 +1,6 @@
-package src;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.sql.Timestamp;
-import java.util.Date;
 import java.nio.file.Paths;
 import java.nio.file.Path;
 
@@ -23,6 +21,7 @@ public class Logger {
 	private BufferedWriter writer;
 	
 	
+	
 	private Logger() {
 		try {
 			writer = new BufferedWriter(new FileWriter(logFile, true));
@@ -30,11 +29,13 @@ public class Logger {
 		} catch (IOException e) {	}
 	}
 	
+	
 	public static synchronized Logger getInstance(){
 		if(sharedInstance == null)
 			sharedInstance = new Logger();
 		return sharedInstance;
 	}
+	
 	
 	public void logFile (String log ) {
 		try{
