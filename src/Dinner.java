@@ -56,7 +56,7 @@ public class Dinner extends FoodCategory{
 
     @Override
     public String toString() {
-        return "Dinner{" + "name = " + name + ", description = " + description +", typeOfFood = " + typeOfFood +  ", foodItems=" + getListItems(foodItems) + '}';
+        return "Dinner { " + "name = " + name + ", description = " + description +", typeOfFood = " + typeOfFood +  ", foodItems=" + getListItems(foodItems) + " } ";
     }
 
     

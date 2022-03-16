@@ -13,7 +13,15 @@ import java.util.List;
  */
 public class MealFactory {
 	
+	private Logger log;
+	
+	public MealFactory() {
+		log = Logger.getLoggerInstance();		
+	}
+	
     public static FoodCategory getMealType(MealType mealType){
+    	
+    Logger log =  Logger.getLoggerInstance();
     	
     switch (mealType){
     
@@ -23,11 +31,11 @@ public class MealFactory {
 
             FoodItem fib1 = new FoodItem(Integer.valueOf("1"),"Ham Sandwhich","Sides",Double.valueOf("10.88"),"Breakfast");            		            
             FoodItem fib2 = new FoodItem(Integer.valueOf("2"),"Bacon Burger","Sides",Double.valueOf("10.88"),"Breakfast");
-            FoodItem fib3 = new FoodItem(Integer.valueOf("3"),"Scrambled Eggs","Sides",Double.valueOf("10.88"),"Breakfast");
-            
+            FoodItem fib3 = new FoodItem(Integer.valueOf("3"),"Scrambled Eggs","Sides",Double.valueOf("10.88"),"Breakfast");            
             fib.add(fib1);
             fib.add(fib2);
             fib.add(fib3);
+            log.logMessage("Returning Breakfast Meal Factory");
             return new Breakfast("Sunday breakfast","Handcrafted Breakfast for a bright day",fib);
             
         case lunch:
@@ -40,6 +48,7 @@ public class MealFactory {
             fil.add(fil1);
             fil.add(fil2);
             fil.add(fil3);
+            log.logMessage("Returning Breakfast Meal Factory");
             return new Lunch("Sunday Lunch","Handcrafted Lunch for filling meal",fil);
             
         case dinner:
@@ -54,6 +63,7 @@ public class MealFactory {
             fid.add(fid2);
             fid.add(fid3);
             fid.add(fid4);
+            log.logMessage("Returning Dinner Meal Factory");
             return new Dinner("Dinner Meal","Handcrafted Dinner for a delighted evening",fid, "Vegetarian");
         }
     return null;

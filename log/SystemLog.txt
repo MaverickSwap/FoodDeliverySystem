@@ -1,0 +1,28 @@
+2022-03-15 23:03:30 Log: Inside Log
+2022-03-15 23:04:57 Log: Inside Log
+2022-03-15 23:06:39 Log: Inside Log
+2022-03-15 23:06:49 Log: Inside Log
+2022-03-15 23:10:10 Log: Inside Log
+2022-03-15 23:10:10 Log: Inside FoodItem Builder
+2022-03-15 23:10:10 Log: Inside FoodItem Builder
+2022-03-15 23:10:10 Log: Inside FoodItem Builder
+2022-03-15 23:16:02 Log: Inside Log
+2022-03-15 23:16:02 Log: Returning Breakfast Meal Factory
+2022-03-15 23:16:02 Log: Returning Breakfast Meal Factory
+2022-03-15 23:16:02 Log: Returning Dinner Meal Factory
+2022-03-15 23:16:02 Log: Inside FoodItem Builder
+2022-03-15 23:16:02 Log: Created Builder instance successfully
+2022-03-15 23:16:02 Log: Inside FoodItem Builder
+2022-03-15 23:16:02 Log: Created Builder instance successfully
+2022-03-15 23:16:02 Log: Inside FoodItem Builder
+2022-03-15 23:16:02 Log: Created Builder instance successfully
+2022-03-15 23:27:21 Log: Inside Log
+2022-03-15 23:27:21 Log: Returning Breakfast Meal Factory
+2022-03-15 23:27:21 Log: Returning Breakfast Meal Factory
+2022-03-15 23:27:21 Log: Returning Dinner Meal Factory
+2022-03-15 23:27:21 Log: Inside FoodItem Builder
+2022-03-15 23:27:21 Log: Created Builder instance successfully
+2022-03-15 23:27:21 Log: Inside FoodItem Builder
+2022-03-15 23:27:21 Log: Created Builder instance successfully
+2022-03-15 23:27:21 Log: Inside FoodItem Builder
+2022-03-15 23:27:21 Log: Created Builder instance successfully

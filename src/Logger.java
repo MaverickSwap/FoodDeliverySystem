@@ -24,13 +24,18 @@ public class Logger {
 	
 	private Logger() {
 		try {
+			
 			writer = new BufferedWriter(new FileWriter(logFile, true));
-			timestamp = new Timestamp(System.currentTimeMillis());	
-		} catch (IOException e) {	}
+			timestamp = new Timestamp(System.currentTimeMillis());
+			
+		} catch (IOException e) {	
+			
+			System.out.println("Encountered Exception " + e);
+		}
 	}
 	
 	
-	public static synchronized Logger getLoggerInstanse(){
+	public static synchronized Logger getLoggerInstance(){
 		if(sharedInstance == null)
 			sharedInstance = new Logger();
 		return sharedInstance;
@@ -39,11 +44,13 @@ public class Logger {
 	
 	public void logMessage (String log ) {
 		try{
-			System.out.println(sdf.format(timestamp)+" Log: "+log);
+			this.timestamp = new Timestamp(System.currentTimeMillis());
+//			System.out.println(sdf.format(timestamp)+" Log: "+log);
 			writer.write(sdf.format(timestamp)+" Log: "+log+"\n");
-			writer.close();
+			writer.flush();
+			//writer.close();
 		}catch(IOException e){
-			System.out.println(sdf.format(timestamp)+" Error: Error creating a log."+e);
+			System.out.println(sdf.format(timestamp)+" Error: Error creating a log."+e);			
 		}
 	}
 }
