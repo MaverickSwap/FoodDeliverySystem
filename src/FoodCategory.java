@@ -1,12 +1,16 @@
 import java.util.List;
 
 public class FoodCategory {
-	
+
 	private Integer id;
 	private String name;
 	private String description;
 	private List<FoodItem> foodItems;
 	
+        public String getMealConfiguration(){
+            return "Inside Food Category";
+        }
+        
 	public FoodCategory() {
 		
 	}
