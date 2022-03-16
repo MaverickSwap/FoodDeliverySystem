@@ -30,14 +30,14 @@ public class Logger {
 	}
 	
 	
-	public static synchronized Logger getInstance(){
+	public static synchronized Logger getLoggerInstanse(){
 		if(sharedInstance == null)
 			sharedInstance = new Logger();
 		return sharedInstance;
 	}
 	
 	
-	public void logFile (String log ) {
+	public void logMessage (String log ) {
 		try{
 			System.out.println(sdf.format(timestamp)+" Log: "+log);
 			writer.write(sdf.format(timestamp)+" Log: "+log+"\n");
