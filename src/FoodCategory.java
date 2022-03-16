@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class FoodCategory {
+public abstract class FoodCategory {
 
 	private Integer id;
 	private String name;
