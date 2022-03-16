@@ -7,9 +7,9 @@ public abstract class FoodCategory {
 	private String description;
 	private List<FoodItem> foodItems;
 	
-        public String getMealConfiguration(){
-            return "Inside Food Category";
-        }
+    public String getMealConfiguration(){
+        return "Inside Food Category";
+    }
         
 	public FoodCategory() {
 		

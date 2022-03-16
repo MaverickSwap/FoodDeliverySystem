@@ -48,7 +48,7 @@ public class Breakfast extends FoodCategory{
 
     @Override
     public String toString() {
-        return "Breakfast{" + "name=" + name + ", description=" + description + ", foodItems=" + getListItems(foodItems) + '}';
+        return "Breakfast{" + "name = " + name + ", description = " + description + ", foodItems = " + getListItems(foodItems) + '}';
     }
         
     public Breakfast(String name,String description, List <FoodItem> foodItems ){
@@ -61,7 +61,7 @@ public class Breakfast extends FoodCategory{
         StringBuilder sb = new StringBuilder();
         for(FoodItem s : list){
             sb.append(s.getName());
-            sb.append('|');
+            sb.append(" | ");
         }
         return sb.toString();
     }   

@@ -56,7 +56,7 @@ public class Dinner extends FoodCategory{
 
     @Override
     public String toString() {
-        return "Dinner{" + "name=" + name + ", description=" + description +", typeOfFood=" + typeOfFood +  ", foodItems=" + getListItems(foodItems) + '}';
+        return "Dinner{" + "name = " + name + ", description = " + description +", typeOfFood = " + typeOfFood +  ", foodItems=" + getListItems(foodItems) + '}';
     }
 
     
@@ -72,7 +72,7 @@ public class Dinner extends FoodCategory{
         StringBuilder sb = new StringBuilder();
         for(FoodItem s : list){
             sb.append(s.getName());
-            sb.append('|');
+            sb.append(" | ");
         }
         return sb.toString();
     } 

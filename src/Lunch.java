@@ -48,21 +48,24 @@ public class Lunch extends FoodCategory{
 
     @Override
     public String toString() {
-        return "Lunch{" + "name=" + name + ", description=" + description + ", foodItems=" + getListItems(foodItems) + '}';
+        return "Lunch{" + "name = " + name + ", description = " + description + ", foodItems = " + getListItems(foodItems) + '}';
     }
         
+    
     public Lunch(String name,String description, List <FoodItem> foodItems ){
        this.name = name;
        this.description = description;
        this.foodItems = foodItems;
     }   
     
+    
     public String getListItems(List <FoodItem> list){
         StringBuilder sb = new StringBuilder();
         for(FoodItem s : list){
             sb.append(s.getName());
-            sb.append('|');
+            sb.append(" | ");
         }
         return sb.toString();
     }
+    
 }
