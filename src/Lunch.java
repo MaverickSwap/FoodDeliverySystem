@@ -12,7 +12,8 @@ import java.util.List;
  * @author Tejas Kale
  */
 public class Lunch extends FoodCategory{
-        private String name;
+	
+    private String name;
 	private String description;
 	private List<FoodItem> foodItems; 
         

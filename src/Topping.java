@@ -7,8 +7,8 @@ public class Topping {
 	private String description;
 	
 	public Topping(Integer id, String name, String description) {
-		self.id = id;
-		self.name = name;
-		self.description = description;
+		this.id = id;
+		this.name = name;
+		this.description = description;
 	}
 }

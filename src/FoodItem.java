@@ -22,25 +22,27 @@ public class FoodItem {
 		this.category = foodItemBuilder.category;
 	}
 	
-        public FoodItem(Integer id, String name, String description, String imageUrl, Float price, String Category){
+        public FoodItem(Integer id, String name, String description, String imageUrl, Double price, String category){
             this.id = id;
             this.description = description;
+            this.name = name;
             this.imageUrl = imageUrl;
             this.price = price;
-            this.Category = Category;
+            this.category = category;
         }
         
-        public FoodItem(Integer id, String name, String description, Float price, String Category){
+        public FoodItem(Integer id, String name, String description, Double price, String category){
             this.id = id;
             this.name = name;
             this.description = description;
+			this.imageUrl = "";
             this.price = price;
-            this.Category = Category;
+            this.category = category;
         }
 
         @Override
         public String toString() {
-            return "FoodItem{" + "id=" + id + ", name=" + name + ", description=" + description + ", imageUrl=" + imageUrl + ", price=" + price + ", Category=" + Category + '}';
+            return "FoodItem{" + "id=" + id + ", name=" + name + ", description=" + description + ", imageUrl=" + imageUrl + ", price=" + price + ", Category=" + category + '}';
         }
         
         
@@ -135,6 +137,11 @@ public class FoodItem {
 			return foodItem;
 		}
 
+	}
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return this.name;
 	}
 }
 
