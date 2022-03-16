@@ -15,6 +15,15 @@ public class Dinner extends FoodCategory{
         private String name;
 	private String description;
 	private List<FoodItem> foodItems; 
+        private String typeOfFood;
+
+    public String getTypeOfFood() {
+        return typeOfFood;
+    }
+
+    public void setTypeOfFood(String typeOfFood) {
+        this.typeOfFood = typeOfFood;
+    }
         
     @Override
     public String getMealConfiguration() {
@@ -47,13 +56,16 @@ public class Dinner extends FoodCategory{
 
     @Override
     public String toString() {
-        return "Dinner{" + "name=" + name + ", description=" + description + ", foodItems=" + getListItems(foodItems) + '}';
+        return "Dinner{" + "name=" + name + ", description=" + description +", typeOfFood=" + typeOfFood +  ", foodItems=" + getListItems(foodItems) + '}';
     }
+
+    
         
-    public Dinner(String name,String description, List <FoodItem> foodItems ){
+    public Dinner(String name,String description, List <FoodItem> foodItems , String typeOfFood){
        this.name = name;
        this.description = description;
        this.foodItems = foodItems;
+       this.typeOfFood = typeOfFood;
     }  
     
     public String getListItems(List <FoodItem> list){
@@ -63,6 +75,5 @@ public class Dinner extends FoodCategory{
             sb.append('|');
         }
         return sb.toString();
-    }
-        
+    } 
 }

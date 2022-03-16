@@ -64,5 +64,4 @@ public class Lunch extends FoodCategory{
         }
         return sb.toString();
     }
-    
 }

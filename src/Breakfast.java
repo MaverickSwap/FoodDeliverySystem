@@ -64,6 +64,5 @@ public class Breakfast extends FoodCategory{
             sb.append('|');
         }
         return sb.toString();
-    }
-        
+    }   
 }
