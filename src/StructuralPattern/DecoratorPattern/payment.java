@@ -3,19 +3,18 @@ package StructuralPattern.DecoratorPattern;
 public abstract class payment extends OrderFood {
 
 
-private OrderFood orderFood;
-public OrderFood getFood() {
+    private OrderFood orderFood;
 
-return orderFood;
-}
-public void setorderFood(OrderFood orderFood) {
+    public OrderFood getFood() {
+        return orderFood;
+    }
 
-this.orderFood = orderFood;
-}
+    public void setOrderFood(OrderFood orderFood) {
+        this.orderFood = orderFood;
+    }
 
-public payment(OrderFood orderFood, float price, String desc) {
-
-super(price, desc);
-this.orderFood = orderFood;
-}
+    public payment(OrderFood orderFood, float price, String desc) {
+        super(price, desc);
+        this.orderFood = orderFood;
+    }
 }

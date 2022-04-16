@@ -2,13 +2,12 @@ package StructuralPattern.DecoratorPattern;
 
 public class HamBurger extends OrderFood {
 
-public HamBurger() {
+    public HamBurger() {
+        super(2.70f, " Ham Burger, with no onions ");
+    }
 
-super(2.70f, " Ham Burger, with no onions ");
-}
-@Override
-public float cost() {
-
-return getPrice();
-}
+    @Override
+    public float cost() {
+        return getPrice();
+    }
 }

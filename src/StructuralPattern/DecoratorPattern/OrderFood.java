@@ -2,30 +2,33 @@ package StructuralPattern.DecoratorPattern;
 
 public abstract class OrderFood {
 
-private float price;
-private String desc;
-public OrderFood(float price, String desc) {
-this.price = price;
-this.desc = desc;
-}
-public OrderFood() {
+    private float price;
+    private String desc;
 
-}
-public float getPrice() {
+    public OrderFood(float price, String desc) {
+        this.price = price;
+        this.desc = desc;
+    }
 
-return price;
-}
-public void setPrice(float price) {
+    public OrderFood() {
 
-this.price = price;
-}
-public String getDesc() {
+    }
 
-return desc;
-}
-public void setDesc(String desc) {
+    public float getPrice() {
+        return price;
+    }
 
-this.desc = desc;
-}
-public abstract float cost();
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public abstract float cost();
 }
