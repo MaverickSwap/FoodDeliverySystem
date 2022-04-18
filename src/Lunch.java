@@ -2,16 +2,10 @@
 import java.util.Arrays;
 import java.util.List;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+import StructuralPattern.CompositePattern.Meal;
 
-/**
- *
- * @author Tejas Kale
- */
-public class Lunch extends FoodCategory{
+
+public class Lunch extends FoodCategory implements Meal {
 	
     private String name;
 	private String description;
@@ -67,5 +61,45 @@ public class Lunch extends FoodCategory{
         }
         return sb.toString();
     }
-    
+
+	@Override
+	public Double getTotalCalories() {
+		
+		Double totalCalories = 0.0;
+		
+		for (int i = 0; i < this.foodItems.size(); i++) {
+			
+			totalCalories  += this.foodItems.get(i).getCalories().getTotalCalories();
+		}
+				
+		return  totalCalories;
+	}
+
+	@Override
+	public String getMealDescription() {
+		
+		return this.description;
+	}
+
+	
+	@Override
+	public Double getMealPrice() {
+		
+		Double totalPrice = 0.0;
+		
+		for (int i = 0; i < this.foodItems.size(); i++) {
+					
+			totalPrice  += this.foodItems.get(i).getPrice();
+		}
+		return  totalPrice;
+	}
+	
+	@Override
+	public void printMealItems() {
+		
+		for (int i = 0; i < this.foodItems.size(); i++) {
+			
+			System.out.println(this.foodItems.get(i).getName());
+		}
+	}
 }

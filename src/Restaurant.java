@@ -16,8 +16,11 @@ public class Restaurant {
 	
 	
 
-	public Restaurant() {
-		// TODO Auto-generated constructor stub
+	public Restaurant(Integer id, String name, Menu menu) {
+		
+		this.id = id;
+		this.name = name;
+		this.menu = menu;
 	}
 	
 	

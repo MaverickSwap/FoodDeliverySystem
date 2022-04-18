@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import StructuralPattern.CompositePattern.Calories;
+
 
 public class FoodItem {
 	
@@ -13,6 +15,7 @@ public class FoodItem {
 	private final String category;
 	private List<Topping> toppings;
 	private List<SideDish> sides;
+	private Calories calories = new Calories(100.0);
 	
 	private FoodItem(FoodItemBuilder foodItemBuilder) {
 		
@@ -48,12 +51,22 @@ public class FoodItem {
         }
         
         
+    public Calories getCalories() {
+    	return this.calories;
+    }
 	
+    
+    public Double getPrice() {
+    	return this.price;
+    }
+	
+    
 	public String getDescription() {
 		
 		System.out.println("Printing Food Item Description");
 		return description;
 	}
+
 
 	//
 	//  This class implements the Builder Pattern. Adds extra variants, Sides / Toppings.
@@ -69,7 +82,7 @@ public class FoodItem {
 		private String category;
 		private List<Topping> toppings;
 		private List<SideDish> sides;
-		private Logger log;
+		private Logger log;		
 		
 		public FoodItemBuilder(Integer id, String name, String description, Double price, String category) {
 			

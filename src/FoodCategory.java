@@ -1,6 +1,8 @@
 import java.util.List;
 
-public abstract class FoodCategory {
+import StructuralPattern.CompositePattern.Meal;
+
+public abstract class FoodCategory implements Meal {
 
 	private Integer id;
 	private String name;

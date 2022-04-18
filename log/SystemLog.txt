@@ -26,3 +26,30 @@
 2022-03-15 23:27:21 Log: Created Builder instance successfully
 2022-03-15 23:27:21 Log: Inside FoodItem Builder
 2022-03-15 23:27:21 Log: Created Builder instance successfully
+2022-04-17 18:38:57 Log: Inside Log
+2022-04-17 18:38:57 Log: Returning Breakfast Meal Factory
+2022-04-17 18:38:57 Log: Returning Breakfast Meal Factory
+2022-04-17 18:38:57 Log: Returning Dinner Meal Factory
+2022-04-17 18:38:57 Log: Returning Dinner Meal Factory
+2022-04-17 18:38:57 Log: Returning Breakfast Meal Factory
+2022-04-17 18:38:57 Log: Returning Breakfast Meal Factory
+2022-04-17 18:41:09 Log: Inside Log
+2022-04-17 18:41:09 Log: Returning Dinner Meal Factory
+2022-04-17 18:41:09 Log: Returning Breakfast Meal Factory
+2022-04-17 18:41:09 Log: Returning Breakfast Meal Factory
+2022-04-17 18:42:29 Log: Inside Log
+2022-04-17 18:42:29 Log: Returning Dinner Meal Factory
+2022-04-17 18:42:29 Log: Returning Breakfast Meal Factory
+2022-04-17 18:42:29 Log: Returning Breakfast Meal Factory
+2022-04-17 18:43:29 Log: Inside Log
+2022-04-17 18:43:29 Log: Returning Dinner Meal Factory
+2022-04-17 18:43:29 Log: Returning Breakfast Meal Factory
+2022-04-17 18:43:29 Log: Returning Breakfast Meal Factory
+2022-04-17 18:49:08 Log: Inside Log
+2022-04-17 18:49:08 Log: Returning Dinner Meal Factory
+2022-04-17 18:49:08 Log: Returning Breakfast Meal Factory
+2022-04-17 18:49:08 Log: Returning Breakfast Meal Factory
+2022-04-17 18:51:34 Log: Inside Log
+2022-04-17 18:51:34 Log: Returning Dinner Meal Factory
+2022-04-17 18:51:34 Log: Returning Breakfast Meal Factory
+2022-04-17 18:51:34 Log: Returning Breakfast Meal Factory
