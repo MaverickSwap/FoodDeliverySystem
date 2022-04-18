@@ -77,3 +77,11 @@
 2022-04-17 20:01:07 Log: Returning Dinner Meal Factory
 2022-04-17 20:01:07 Log: Returning Breakfast Meal Factory
 2022-04-17 20:01:07 Log: Returning Breakfast Meal Factory
+2022-04-17 20:14:56 Log: Inside Log
+2022-04-17 20:14:56 Log: Returning Breakfast Meal Factory
+2022-04-17 20:14:56 Log: Returning Breakfast Meal Factory
+2022-04-17 20:14:56 Log: Returning Dinner Meal Factory
+2022-04-17 20:16:01 Log: Inside Log
+2022-04-17 20:16:01 Log: Returning Breakfast Meal Factory
+2022-04-17 20:16:01 Log: Returning Breakfast Meal Factory
+2022-04-17 20:16:01 Log: Returning Dinner Meal Factory

@@ -24,13 +24,13 @@ public class Main {
             // Lunch / Dinner / Breakfast is the Leaf Component
             // ComboMeal is the Composite Element
             
-            List<Meal> paradise_meals = new ArrayList<Meal>();                       
-                        
-            paradise_meals.add(MealFactory.getMealType(MealType.dinner));
-            paradise_meals.add(MealFactory.getMealType(MealType.breakfast));
-            paradise_meals.add(MealFactory.getMealType(MealType.lunch));
+            List<Meal> paradise_meals = new ArrayList<Meal>();                                   
             
             ComboMeal paradiseComboMeal = new ComboMeal(paradise_meals);
+            paradiseComboMeal.addMeal(MealFactory.getMealType(MealType.breakfast));
+            paradiseComboMeal.addMeal(MealFactory.getMealType(MealType.lunch));
+            paradiseComboMeal.addMeal(MealFactory.getMealType(MealType.dinner));
+            
             Menu paradise_menu = new Menu(paradiseComboMeal);
                         
             
