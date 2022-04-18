@@ -1,9 +1,11 @@
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import StructuralPattern.CompositePattern.ComboMeal;
 import StructuralPattern.CompositePattern.Meal;
+import StructuralPattern.DecoratorPattern.*;
 
 public class Main {
 
@@ -41,6 +43,62 @@ public class Main {
             //            
             System.out.println("\nDISPLAYING THE MEALS MENU OF PARADISE RESTAURANT");
             paradise.getMenu().printMeals();            
+            
+            
+            System.out.println("\n\n ---- DECORATOR PATTERN ----\n\n");
+            
+            
+            
+            /*
+             *   DECORATOR PATTERN
+             */
+            DecimalFormat df = new DecimalFormat("#.00");
+
+            System.out.println(" Begin Food Order");
+            System.out.println("======================================");
+
+            // Order Cheese Burger
+            OrderFood food = new CheeseBurger();
+            float price = Float.valueOf(df.format(food.cost()));
+            System.out.println("•" + food.getDesc() + " : " + price + "$");
+            System.out.println("============================================================================");
+
+            // Add Onions
+            food = new Onion(food);
+            price = Float.valueOf(df.format(food.cost()));
+            System.out.println("•" + food.getDesc() + " : " + price + "$");
+            System.out.println("============================================================================");
+
+            // Add Extra Thousand Island Sauce
+            food = new ThousandIslandSauce(food);
+            System.out.println("•" + food.getDesc() + " : " + price + "$");
+            System.out.println("============================================================================");
+
+            // Add Coke
+            food = new Coke(food);
+            price = Float.valueOf(df.format(food.cost()));
+            System.out.println("•" + food.getDesc() + " : " + price + "$");
+            System.out.println("============================================================================");
+
+            // Add French Fries
+            food = new Fries(food);
+            price = Float.valueOf(df.format(food.cost()));
+            System.out.println("•" + food.getDesc() + " : " + price + "$");
+            System.out.println("============================================================================");
+
+            // Return SubTotal
+            food = new SubTotal(food);
+            price = Float.valueOf(df.format(food.cost()));
+            System.out.println(food.getDesc() + " " + price + "$");
+            System.out.println("======================================");
+
+            // Add tax and show Total
+            food = new TaxTotal(food);
+            price = Float.valueOf(df.format(food.cost()));
+            System.out.println(food.getDesc() + " " + price + "$");
+            System.out.println("======================================");
+            System.out.println(" End of Order, Check Closed.");
+            
             
             
             //
