@@ -1,15 +1,17 @@
 import java.util.List;
 
+import StructuralPattern.CompositePattern.ComboMeal;
 import StructuralPattern.CompositePattern.Meal;
 
 public class Menu {
 	
 	private List<FoodCategory> categories;
-	private List<Meal> meals;
+//	private List<Meal> meals;
+	private ComboMeal comboMeals;
 	
 	
-	public Menu(List<Meal> meals) {
-		this.meals = meals;
+	public Menu(ComboMeal comboMeals) {
+		this.comboMeals = comboMeals;
 	}
 
 
@@ -22,25 +24,25 @@ public class Menu {
 		this.categories = categories;
 	}
 	
-	public void setMeals(List<Meal> meals) {
-		this.meals = meals;
-	}
+//	public void setMeals(List<Meal> meals) {
+//		this.meals = meals;
+//	}
 	
 	
 	public void printMeals() {
 		
-		for(int i = 0; i < this.meals.size(); i++) {
+		for(int i = 0; i < this.comboMeals.getMeals().size(); i++) {
 			
-			System.out.println("\n\nMeal name: " + this.meals.get(i).getMealDescription());
+			System.out.println("\n\nMeal name: " + this.comboMeals.getMeals().get(i).getMealDescription());
 			
 			System.out.println("Meal includes following items: ");
 			
 			// Print meals description
-			this.meals.get(i).printMealItems();
+			this.comboMeals.getMeals().get(i).printMealItems();
 			
-			System.out.println("Total Calories in this meal: " + this.meals.get(i).getTotalCalories());
+			System.out.println("Total Calories in this meal: " + this.comboMeals.getMeals().get(i).getTotalCalories());
 			
-			System.out.println("Total Price: " + this.meals.get(i).getMealPrice());
+			System.out.println("Total Price: " + this.comboMeals.getMeals().get(i).getMealPrice());
 		}
 	}
 }

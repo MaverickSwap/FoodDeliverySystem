@@ -109,7 +109,7 @@ public class Dinner extends FoodCategory implements Meal{
 		
 		for (int i = 0; i < this.foodItems.size(); i++) {
 			
-			System.out.println(this.foodItems.get(i).getName());
+			System.out.println("  - " + this.foodItems.get(i).getName());
 		}
 	}
 }

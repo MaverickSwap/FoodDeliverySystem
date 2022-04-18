@@ -2,6 +2,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import StructuralPattern.CompositePattern.ComboMeal;
 import StructuralPattern.CompositePattern.Meal;
 
 public class Main {
@@ -19,11 +20,18 @@ public class Main {
             // COMPOSITE PATTERN IMPLEMENTATION
             // 
             
-            List<Meal> paradise_meals = new ArrayList<Meal>(); // Meal is 
+            // Meal is the Base Component ~ Interface            
+            // Lunch / Dinner / Breakfast is the Leaf Component
+            // ComboMeal is the Composite Element
+            
+            List<Meal> paradise_meals = new ArrayList<Meal>();                       
+                        
             paradise_meals.add(MealFactory.getMealType(MealType.dinner));
             paradise_meals.add(MealFactory.getMealType(MealType.breakfast));
-            paradise_meals.add(MealFactory.getMealType(MealType.lunch));            
-            Menu paradise_menu = new Menu(paradise_meals);
+            paradise_meals.add(MealFactory.getMealType(MealType.lunch));
+            
+            ComboMeal paradiseComboMeal = new ComboMeal(paradise_meals);
+            Menu paradise_menu = new Menu(paradiseComboMeal);
                         
             
             Restaurant paradise = new Restaurant(1, "Paradise Restaurant" , paradise_menu);
@@ -31,14 +39,8 @@ public class Main {
             //
             // Displaying the Meals menu
             //            
-            System.out.println("DISPLAYING THE MEALS MENU OF PARADISE RESTAURANT");
-            paradise.getMenu().printMeals();
-            
-            
-            
-            
-            
-            
+            System.out.println("\nDISPLAYING THE MEALS MENU OF PARADISE RESTAURANT");
+            paradise.getMenu().printMeals();            
             
             
             //
