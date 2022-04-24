@@ -3,18 +3,17 @@ package BehavioralPatterns.command.concrete;
 import BehavioralPatterns.command.Command;
 import BehavioralPatterns.command.receiver.Order;
 
-
-public class DeliverOrder implements Command {
+public class PrepareOrder implements Command {
 
     private Order order;
 
-    public DeliverOrder(Order order) {
+    public PrepareOrder(Order order) {
         this.order = order;
     }
 
     @Override
     public void execute() {
-        this.order.setOrderServed(true);
+        this.order.setOrderPrepared(true);
         System.out.println(this.order);
     }
 
