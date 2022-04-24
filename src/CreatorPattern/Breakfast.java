@@ -1,19 +1,22 @@
+package CreatorPattern;
 
 import java.util.Arrays;
 import java.util.List;
-
 import StructuralPattern.CompositePattern.Meal;
 
 
-public class Lunch extends FoodCategory implements Meal {
+
+public class Breakfast extends FoodCategory implements Meal {
+	
 	
     private String name;
 	private String description;
 	private List<FoodItem> foodItems; 
-        
+
+
     @Override
     public String getMealConfiguration() {
-        return "Meal Category selected is Lunch.";
+        return "Meal Category selected is Breakfast.";
     }
 
     public String getName() {
@@ -42,17 +45,15 @@ public class Lunch extends FoodCategory implements Meal {
 
     @Override
     public String toString() {
-        return "Lunch { " + "name = " + name + ", description = " + description + ", foodItems = " + getListItems(foodItems) + " } ";
+        return "Breakfast { " + "name = " + name + ", description = " + description + ", foodItems = " + getListItems(foodItems) + " } ";
     }
         
-    
-    public Lunch(String name,String description, List <FoodItem> foodItems ){
+    public Breakfast(String name,String description, List <FoodItem> foodItems ){
        this.name = name;
        this.description = description;
        this.foodItems = foodItems;
-    }   
-    
-    
+    }  
+     
     public String getListItems(List <FoodItem> list){
         StringBuilder sb = new StringBuilder();
         for(FoodItem s : list){
@@ -61,20 +62,21 @@ public class Lunch extends FoodCategory implements Meal {
         }
         return sb.toString();
     }
-
-	@Override
+    
+    @Override
 	public Double getTotalCalories() {
 		
 		Double totalCalories = 0.0;
 		
 		for (int i = 0; i < this.foodItems.size(); i++) {
 			
-			totalCalories  += this.foodItems.get(i).getCalories().getTotalCalories();
+			totalCalories += this.foodItems.get(i).getCalories().getTotalCalories();
 		}
 				
 		return  totalCalories;
 	}
 
+    
 	@Override
 	public String getMealDescription() {
 		
@@ -89,7 +91,7 @@ public class Lunch extends FoodCategory implements Meal {
 		
 		for (int i = 0; i < this.foodItems.size(); i++) {
 					
-			totalPrice  += this.foodItems.get(i).getPrice();
+			totalPrice += this.foodItems.get(i).getPrice();
 		}
 		return  totalPrice;
 	}
@@ -102,4 +104,5 @@ public class Lunch extends FoodCategory implements Meal {
 			System.out.println("  - " + this.foodItems.get(i).getName());
 		}
 	}
+    
 }

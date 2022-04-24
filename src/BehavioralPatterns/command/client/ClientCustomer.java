@@ -10,26 +10,54 @@ import BehavioralPatterns.command.receiver.Order;
 public class ClientCustomer {
 
     public ClientCustomer() {
-
+    	
+    	/*
+         *  PLACING ORDER
+         */
+    	System.out.println("\nRestaurant Placing Order -- In Progress\n");
         Order myOrder = new Order("Cheese Burger", 2);
+        Manager manager = new Manager();
 
-        Manager manager1 = new Manager();
-
+        /*
+         *  PREPARING ORDER
+         */
+        
         PlaceOrder placeOrder = new PlaceOrder(myOrder);
-        manager1.setCommand(placeOrder);
-        manager1.invokeCommand();
+        manager.setCommand(placeOrder);
+        manager.invokeCommand();
 
+        
+        /*
+         *  VALIDATING ORDER
+         */
+        
+        System.out.println("\nRestaurant Validating Order -- In Progress\n");        
         ValidateOrder validateOrder = new ValidateOrder(myOrder);
-        manager1.setCommand(validateOrder);
-        manager1.invokeCommand();
+        manager.setCommand(validateOrder);
+        manager.invokeCommand();
 
+        /*
+         *  PREPARING ORDER
+         */
+        
+        System.out.println("\nRestaurant Preparing Order -- In Progress\n");
         PrepareOrder prepareOrder = new PrepareOrder(myOrder);
-        manager1.setCommand(prepareOrder);
-        manager1.invokeCommand();
+        manager.setCommand(prepareOrder);
+        manager.invokeCommand();
 
+        /*
+         *  DELIVERING ORDER
+         */
+        
+        System.out.println("\nRestaurant Delivering Order -- In Progress\n");
         DeliverOrder deliverOrder = new DeliverOrder(myOrder);
-        manager1.setCommand(deliverOrder);
-        manager1.invokeCommand();
+        manager.setCommand(deliverOrder);
+        manager.invokeCommand();
+        
+        /*
+         *  ORDER COMPLETE
+         */
+        System.out.println("\nDelivery Complete! Thanks for Ordering.\n");
 
     }
 

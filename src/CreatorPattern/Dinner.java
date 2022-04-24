@@ -1,21 +1,28 @@
+package CreatorPattern;
 
 import java.util.Arrays;
 import java.util.List;
+
 import StructuralPattern.CompositePattern.Meal;
 
 
-
-public class Breakfast extends FoodCategory implements Meal {
-	
-	
-    private String name;
+public class Dinner extends FoodCategory implements Meal{
+        private String name;
 	private String description;
 	private List<FoodItem> foodItems; 
+        private String typeOfFood;
 
+    public String getTypeOfFood() {
+        return typeOfFood;
+    }
 
+    public void setTypeOfFood(String typeOfFood) {
+        this.typeOfFood = typeOfFood;
+    }
+        
     @Override
     public String getMealConfiguration() {
-        return "Meal Category selected is Breakfast.";
+        return "Meal Category selected is Dinner.";
     }
 
     public String getName() {
@@ -44,15 +51,18 @@ public class Breakfast extends FoodCategory implements Meal {
 
     @Override
     public String toString() {
-        return "Breakfast { " + "name = " + name + ", description = " + description + ", foodItems = " + getListItems(foodItems) + " } ";
+        return "Dinner { " + "name = " + name + ", description = " + description +", typeOfFood = " + typeOfFood +  ", foodItems=" + getListItems(foodItems) + " } ";
     }
+
+    
         
-    public Breakfast(String name,String description, List <FoodItem> foodItems ){
+    public Dinner(String name,String description, List <FoodItem> foodItems , String typeOfFood){
        this.name = name;
        this.description = description;
        this.foodItems = foodItems;
+       this.typeOfFood = typeOfFood;
     }  
-     
+    
     public String getListItems(List <FoodItem> list){
         StringBuilder sb = new StringBuilder();
         for(FoodItem s : list){
@@ -60,7 +70,8 @@ public class Breakfast extends FoodCategory implements Meal {
             sb.append(" | ");
         }
         return sb.toString();
-    }
+    } 
+    
     
     @Override
 	public Double getTotalCalories() {
@@ -75,7 +86,6 @@ public class Breakfast extends FoodCategory implements Meal {
 		return  totalCalories;
 	}
 
-    
 	@Override
 	public String getMealDescription() {
 		
@@ -103,5 +113,4 @@ public class Breakfast extends FoodCategory implements Meal {
 			System.out.println("  - " + this.foodItems.get(i).getName());
 		}
 	}
-    
 }

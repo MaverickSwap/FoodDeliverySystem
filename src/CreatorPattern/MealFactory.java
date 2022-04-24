@@ -1,3 +1,4 @@
+package CreatorPattern;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +8,6 @@ import java.util.List;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-/**
- *
- * @author Tejas Kale
- */
 public class MealFactory {
 	
 	private Logger log;
