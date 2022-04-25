@@ -10,9 +10,9 @@ public class Client {
 	public static void main(String[] args) {
 				
 		CartManager cartManager = new CartManager();
-				
-		FoodItem f1 = new FoodItem.FoodItemBuilder(1001, "CheeseBurger", "American Burger", 4.99, "Fastfood").build();
-		FoodItem f2 = new FoodItem.FoodItemBuilder(1002, "Fries", "Potato Snack", 2.99, "Fastfood").build();
+		
+		FoodItem f1 = new FoodItem(1001, "CheeseBurger", "American Burger", 4.99, "Fastfood");
+		FoodItem f2 = new FoodItem(1002, "Fries", "Potato Snack", 2.99, "Fastfood");
 		
 		List<FoodItem> foodList = new ArrayList<FoodItem>();
 		foodList.add(f1);

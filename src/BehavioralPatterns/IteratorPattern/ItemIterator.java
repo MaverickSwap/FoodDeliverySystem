@@ -1,4 +1,4 @@
-package BehavioralPatterns.iterator;
+package BehavioralPatterns.IteratorPattern;
 
 
 public interface ItemIterator<T>{
