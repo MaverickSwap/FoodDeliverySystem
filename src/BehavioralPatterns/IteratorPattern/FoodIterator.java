@@ -1,4 +1,4 @@
-package BehavioralPatterns.iterator;
+package BehavioralPatterns.IteratorPattern;
 
 import java.util.List;
 import java.util.Locale.Category;

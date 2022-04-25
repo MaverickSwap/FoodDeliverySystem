@@ -1,24 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
-
-/**
- *
- * @author Tejas Kale
- */
- 
-package BehavioralPatterns.commandPattern;
+package BehavioralPatterns.CommandPattern;
 
 import java.util.List;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Tejas Kale
- */
+
 public class CartManager {
     private List <Order> cartList = new ArrayList<Order>();
     

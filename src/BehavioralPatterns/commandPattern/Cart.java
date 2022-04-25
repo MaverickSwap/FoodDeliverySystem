@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package BehavioralPatterns.commandPattern;
+
+package BehavioralPatterns.CommandPattern;
 
 import CreatorPattern.FoodItem;
 import java.util.ArrayList;
 import java.util.List;
-/**
- *
- * @author Tejas Kale
- */
+
 public class Cart {
     List <CreatorPattern.FoodItem> foodItems = new ArrayList<CreatorPattern.FoodItem>();
     

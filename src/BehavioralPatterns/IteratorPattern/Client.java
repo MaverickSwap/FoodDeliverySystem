@@ -1,4 +1,4 @@
-package BehavioralPatterns.iterator;
+package BehavioralPatterns.IteratorPattern;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +19,8 @@ public class Client {
 		categories.add(MealFactory.getMealType(MealType.breakfast));
 		categories.add(MealFactory.getMealType(MealType.lunch));
 		categories.add(MealFactory.getMealType(MealType.dinner));
+		
+		System.out.println("\nIterating Over FoodCategories and FoodItems in Menu using Iterator Pattern");
 		
 		
 		FoodList cat = new FoodList<FoodCategory>(categories);
