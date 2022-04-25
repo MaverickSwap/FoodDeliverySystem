@@ -2,7 +2,7 @@ package BehavioralPatterns.iterator;
 
 import java.util.List;
 
-public class FoodList<T> {
+public class FoodList<T> implements FoodListIterator {
 	
 	public List<T> items;
 	
@@ -17,3 +17,4 @@ public class FoodList<T> {
 	
 	
 }
+
